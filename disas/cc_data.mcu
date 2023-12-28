@@ -1,0 +1,123 @@
+_	DATA	0H	; 
+ADC_ADCCON1	DATA	0B4H	; ADC control 1
+ADC_ADCCON2	DATA	0B5H	; ADC control 2
+ADC_ADCCON3	DATA	0B6H	; ADC control 3
+ADC_ADCL	DATA	0BAH	; ADC data low
+ADC_ADCH	DATA	0BBH	; ADC data high
+ADC_RNDL	DATA	0BCH	; Random number generator data low
+ADC_RNDH	DATA	0BDH	; Random number generator data high
+AES_ENCDI	DATA	0B1H	; Encryption/decryption input data
+AES_ENCDO	DATA	0B2H	; Encryption/decryption output data
+AES_ENCCS	DATA	0B3H	; Encryption/decryption control and status
+CPU_P0	DATA	080H	; Port 0. Readable from XDATA (0x7080)
+CPU_SP	DATA	081H	; Stack pointer
+CPU_DPL0	DATA	082H	; Data pointer 0 low byte
+CPU_DPH0	DATA	083H	; Data pointer 0 high byte
+CPU_DPL1	DATA	084H	; Data pointer 1 low byte
+CPU_DPH1	DATA	085H	; Data pointer 0 high byte
+CPU_PCON	DATA	087H	; Power mode control
+CPU_TCON	DATA	088H	; Interrupt flags
+CPU_P1	DATA	090H	; Port 1. Readable from XDATA (0x7090)
+CPU_DPS	DATA	092H	; Data pointer select
+CPU_S0CON	DATA	098H	; Interrupt flags 2
+CPU_IEN2	DATA	09AH	; Interrupt enable 2
+CPU_S1CON	DATA	09BH	; Interrupt flags 3
+CPU_P2	DATA	0A0H	; Port 2. Readable from XDATA (0x70A0)
+CPU_IEN0	DATA	0A8H	; Interrupt enable 0
+CPU_IP0	DATA	0A9H	; Interrupt priority 0
+CPU_IEN1	DATA	0B8H	; Interrupt enable 1
+CPU_IP1	DATA	0B9H	; Interrupt priority 1
+CPU_IRCON	DATA	0C0H	; Interrupt flags 4
+CPU_PSW	DATA	0D0H	; Program status Word
+CPU_ACC	DATA	0E0H	; Accumulator
+CPU_IRCON2	DATA	0E8H	; Interrupt flags 5
+CPU_B	DATA	0F0H	; B register
+DMA_DMAIRQ	DATA	0D1H	; DMA interrupt flag
+DMA_DMA1CFGL	DATA	0D2H	; DMA channel 1–4 configuration address low
+DMA_DMA1CFGH	DATA	0D3H	; DMA channel 1–4 configuration address high
+DMA_DMA0CFGL	DATA	0D4H	; DMA channel 0 configuration address low
+DMA_DMA0CFGH	DATA	0D5H	; DMA channel 0 configuration address high
+DMA_DMAARM	DATA	0D6H	; DMA channel armed
+DMA_DMAREQ	DATA	0D7H	; DMA channel start request and status
+IOC_P0IFG	DATA	089H	; Port 0 interrupt status flag
+IOC_P1IFG	DATA	08AH	; Port 1 interrupt status flag
+IOC_P2IFG	DATA	08BH	; Port 2 interrupt status flag
+IOC_PICTL	DATA	08CH	; Port pins interrupt mask and edge
+IOC_P0IEN	DATA	0ABH	; Port 0 interrupt mask
+IOC_P1IEN	DATA	08DH	; Port 1 interrupt mask
+IOC_P2IEN	DATA	0ACH	; Port 2 interrupt mask
+IOC_P0INP	DATA	08FH	; Port 0 input mode
+IOC_PERCFG	DATA	0F1H	; Peripheral I/O control
+IOC_APCFG	DATA	0F2H	; Analog peripheral I/O configuration
+IOC_P0SEL	DATA	0F3H	; Port 0 function select
+IOC_P1SEL	DATA	0F4H	; Port 1 function select
+IOC_P2SEL	DATA	0F5H	; Port 2 function select
+IOC_P1INP	DATA	0F6H	; Port 1 input mode
+IOC_P2INP	DATA	0F7H	; Port 2 input mode
+IOC_P0DIR	DATA	0FDH	; Port 0 direction
+IOC_P1DIR	DATA	0FEH	; Port 1 direction
+IOC_P2DIR	DATA	0FFH	; Port 2 direction
+IOC_PMUX	DATA	0AEH	; Power-down signal mux
+MEM_MPAGE	DATA	093H	; Memory page select
+MEM_MEMCTR	DATA	0C7H	; Memory system control
+MEM_FMAP	DATA	09FH	; Flash-memory bank mapping
+RF_RFIRQF1	DATA	091H	; RF interrupt flags MSB
+RF_RFD	DATA	0D9H	; RF data
+RF_RFST	DATA	0E1H	; RF command strobe
+RF_RFIRQF0	DATA	0E9H	; RF interrupt flags LSB
+RF_RFERRF	DATA	0BFH	; RF error interrupt flags
+ST_ST0	DATA	095H	; Sleep Timer 0
+ST_ST1	DATA	096H	; Sleep Timer 1
+ST_ST2	DATA	097H	; Sleep Timer 2
+ST_STLOAD	DATA	0ADH	; Sleep-timer load status
+PMC_SLEEPCMD	DATA	0BEH	; Sleep-mode control command
+PMC_SLEEPSTA	DATA	09DH	; Sleep-mode control status
+PMC_CLKCONCMD	DATA	0C6H	; Clock control command
+PMC_CLKCONSTA	DATA	09EH	; Clock control status
+TIM_T1CC0L	DATA	0DAH	; 1 Timer 1 channel 0 capture/compare value low
+TIM_T1CC0H	DATA	0DBH	; 1 Timer 1 channel 0 capture/compare value high
+TIM_T1CC1L	DATA	0DCH	; 1 Timer 1 channel 1 capture/compare value low
+TIM_T1CC1H	DATA	0DDH	; 1 Timer 1 channel 1 capture/compare value high
+TIM_T1CC2L	DATA	0DEH	; 1 Timer 1 channel 2 capture/compare value low
+TIM_T1CC2H	DATA	0DFH	; 1 Timer 1 channel 2 capture/compare value high
+TIM_T1CNTL	DATA	0E2H	; 1 Timer 1 counter low
+TIM_T1CNTH	DATA	0E3H	; 1 Timer 1 counter high
+TIM_T1CTL	DATA	0E4H	; 1 Timer 1 control and status
+TIM_T1CCTL0	DATA	0E5H	; 1 Timer 1 channel 0 capture/compare control
+TIM_T1CCTL1	DATA	0E6H	; 1 Timer 1 channel 1 capture/compare control
+TIM_T1CCTL2	DATA	0E7H	; 1 Timer 1 channel 2 capture/compare control
+TIM_T1STAT	DATA	0AFH	; 1 Timer 1 status
+TIM_T2CTRL	DATA	094H	; 2 Timer 2 control
+TIM_T2EVTCFG	DATA	09CH	; 2 Timer 2 event configuration
+TIM_T2IRQF	DATA	0A1H	; 2 Timer 2 interrupt flags
+TIM_T2M0	DATA	0A2H	; 2 Timer 2 multiplexed register 0
+TIM_T2M1	DATA	0A3H	; 2 Timer 2 multiplexed register 1
+TIM_T2MOVF0	DATA	0A4H	; 2 Timer 2 multiplexed overflow register 0
+TIM_T2MOVF1	DATA	0A5H	; 2 Timer 2 multiplexed overflow register 1
+TIM_T2MOVF2	DATA	0A6H	; 2 Timer 2 multiplexed overflow register 2
+TIM_T2IRQM	DATA	0A7H	; 2 Timer 2 interrupt mask
+TIM_T2MSEL	DATA	0C3H	; 2 Timer 2 multiplex select
+TIM_T3CNT	DATA	0CAH	; 3 Timer 3 counter
+TIM_T3CTL	DATA	0CBH	; 3 Timer 3 control
+TIM_T3CCTL0	DATA	0CCH	; 3 Timer 3 channel 0 compare control
+TIM_T3CC0	DATA	0CDH	; 3 Timer 3 channel 0 compare value
+TIM_T3CCTL1	DATA	0CEH	; 3 Timer 3 channel 1 compare control
+TIM_T3CC1	DATA	0CFH	; 3 Timer 3 channel 1 compare value
+TIM_T4CNT	DATA	0EAH	; 4 Timer 4 counter
+TIM_T4CTL	DATA	0EBH	; 4 Timer 4 control
+TIM_T4CCTL0	DATA	0ECH	; 4 Timer 4 channel 0 compare control
+TIM_T4CC0	DATA	0EDH	; 4 Timer 4 channel 0 compare value
+TIM_T4CCTL1	DATA	0EEH	; 4 Timer 4 channel 1 compare control
+TIM_T4CC1	DATA	0EFH	; 4 Timer 4 channel 1 compare value
+TMINT_TIMIF	DATA	0D8H	; Timers 1/3/4 joint interrupt mask/flags
+USART_U0CSR	DATA	086H	; 0 USART 0 control and status
+USART_U0DBUF	DATA	0C1H	; 0 USART 0 receive/transmit data buffer
+USART_U0BAUD	DATA	0C2H	; 0 USART 0 baud-rate control
+USART_U0UCR	DATA	0C4H	; 0 USART 0 UART control
+USART_U0GCR	DATA	0C5H	; 0 USART 0 generic control
+USART_U1CSR	DATA	0F8H	; 1 USART 1 control and status
+USART_U1DBUF	DATA	0F9H	; 1 USART 1 receive/transmit data buffer
+USART_U1BAUD	DATA	0FAH	; 1 USART 1 baud-rate control
+USART_U1UCR	DATA	0FBH	; 1 USART 1 UART control
+USART_U1GCR	DATA	0FCH	; 1 USART 1 generic control
+WDT_WDCTL	DATA	0C9H	; Watchdog Timer contro

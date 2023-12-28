@@ -1,0 +1,123 @@
+Register SFR Module Description
+ADCCON1 0xB4 ADC ADC control 1
+ADCCON2 0xB5 ADC ADC control 2
+ADCCON3 0xB6 ADC ADC control 3
+ADCL 0xBA ADC ADC data low
+ADCH 0xBB ADC ADC data high
+RNDL 0xBC ADC Random number generator data low
+RNDH 0xBD ADC Random number generator data high
+ENCDI 0xB1 AES Encryption/decryption input data
+ENCDO 0xB2 AES Encryption/decryption output data
+ENCCS 0xB3 AES Encryption/decryption control and status
+P0 0x80 CPU Port 0. Readable from XDATA (0x7080)
+SP 0x81 CPU Stack pointer
+DPL0 0x82 CPU Data pointer 0 low byte
+DPH0 0x83 CPU Data pointer 0 high byte
+DPL1 0x84 CPU Data pointer 1 low byte
+DPH1 0x85 CPU Data pointer 0 high byte
+PCON 0x87 CPU Power mode control
+TCON 0x88 CPU Interrupt flags
+P1 0x90 CPU Port 1. Readable from XDATA (0x7090)
+DPS 0x92 CPU Data pointer select
+S0CON 0x98 CPU Interrupt flags 2
+IEN2 0x9A CPU Interrupt enable 2
+S1CON 0x9B CPU Interrupt flags 3
+P2 0xA0 CPU Port 2. Readable from XDATA (0x70A0)
+IEN0 0xA8 CPU Interrupt enable 0
+IP0 0xA9 CPU Interrupt priority 0
+IEN1 0xB8 CPU Interrupt enable 1
+IP1 0xB9 CPU Interrupt priority 1
+IRCON 0xC0 CPU Interrupt flags 4
+PSW 0xD0 CPU Program status Word
+ACC 0xE0 CPU Accumulator
+IRCON2 0xE8 CPU Interrupt flags 5
+B 0xF0 CPU B register
+DMAIRQ 0xD1 DMA DMA interrupt flag
+DMA1CFGL 0xD2 DMA DMA channel 1–4 configuration address low
+DMA1CFGH 0xD3 DMA DMA channel 1–4 configuration address high
+DMA0CFGL 0xD4 DMA DMA channel 0 configuration address low
+DMA0CFGH 0xD5 DMA DMA channel 0 configuration address high
+DMAARM 0xD6 DMA DMA channel armed
+DMAREQ 0xD7 DMA DMA channel start request and status
+P0IFG 0x89 IOC Port 0 interrupt status flag
+P1IFG 0x8A IOC Port 1 interrupt status flag
+P2IFG 0x8B IOC Port 2 interrupt status flag
+PICTL 0x8C IOC Port pins interrupt mask and edge
+P0IEN 0xAB IOC Port 0 interrupt mask
+P1IEN 0x8D IOC Port 1 interrupt mask
+P2IEN 0xAC IOC Port 2 interrupt mask
+P0INP 0x8F IOC Port 0 input mode
+PERCFG 0xF1 IOC Peripheral I/O control
+APCFG 0xF2 IOC Analog peripheral I/O configuration
+P0SEL 0xF3 IOC Port 0 function select
+P1SEL 0xF4 IOC Port 1 function select
+P2SEL 0xF5 IOC Port 2 function select
+P1INP 0xF6 IOC Port 1 input mode
+P2INP 0xF7 IOC Port 2 input mode
+P0DIR 0xFD IOC Port 0 direction
+P1DIR 0xFE IOC Port 1 direction
+P2DIR 0xFF IOC Port 2 direction
+PMUX 0xAE IOC Power-down signal mux
+MPAGE 0x93 MEMORY Memory page select
+MEMCTR 0xC7 MEMORY Memory system control
+FMAP 0x9F MEMORY Flash-memory bank mapping
+RFIRQF1 0x91 RF RF interrupt flags MSB
+RFD 0xD9 RF RF data
+RFST 0xE1 RF RF command strobe
+RFIRQF0 0xE9 RF RF interrupt flags LSB
+RFERRF 0xBF RF RF error interrupt flags
+ST0 0x95 ST Sleep Timer 0
+ST1 0x96 ST Sleep Timer 1
+ST2 0x97 ST Sleep Timer 2
+STLOAD 0xAD ST Sleep-timer load status
+SLEEPCMD 0xBE PMC Sleep-mode control command
+SLEEPSTA 0x9D PMC Sleep-mode control status
+CLKCONCMD 0xC6 PMC Clock control command
+CLKCONSTA 0x9E PMC Clock control status
+T1CC0L 0xDA Timer 1 Timer 1 channel 0 capture/compare value low
+T1CC0H 0xDB Timer 1 Timer 1 channel 0 capture/compare value high
+T1CC1L 0xDC Timer 1 Timer 1 channel 1 capture/compare value low
+T1CC1H 0xDD Timer 1 Timer 1 channel 1 capture/compare value high
+T1CC2L 0xDE Timer 1 Timer 1 channel 2 capture/compare value low
+T1CC2H 0xDF Timer 1 Timer 1 channel 2 capture/compare value high
+T1CNTL 0xE2 Timer 1 Timer 1 counter low
+T1CNTH 0xE3 Timer 1 Timer 1 counter high
+T1CTL 0xE4 Timer 1 Timer 1 control and status
+T1CCTL0 0xE5 Timer 1 Timer 1 channel 0 capture/compare control
+T1CCTL1 0xE6 Timer 1 Timer 1 channel 1 capture/compare control
+T1CCTL2 0xE7 Timer 1 Timer 1 channel 2 capture/compare control
+T1STAT 0xAF Timer 1 Timer 1 status
+T2CTRL 0x94 Timer 2 Timer 2 control
+T2EVTCFG 0x9C Timer 2 Timer 2 event configuration
+T2IRQF 0xA1 Timer 2 Timer 2 interrupt flags
+T2M0 0xA2 Timer 2 Timer 2 multiplexed register 0
+T2M1 0xA3 Timer 2 Timer 2 multiplexed register 1
+T2MOVF0 0xA4 Timer 2 Timer 2 multiplexed overflow register 0
+T2MOVF1 0xA5 Timer 2 Timer 2 multiplexed overflow register 1
+T2MOVF2 0xA6 Timer 2 Timer 2 multiplexed overflow register 2
+T2IRQM 0xA7 Timer 2 Timer 2 interrupt mask
+T2MSEL 0xC3 Timer 2 Timer 2 multiplex select
+T3CNT 0xCA Timer 3 Timer 3 counter
+T3CTL 0xCB Timer 3 Timer 3 control
+T3CCTL0 0xCC Timer 3 Timer 3 channel 0 compare control
+T3CC0 0xCD Timer 3 Timer 3 channel 0 compare value
+T3CCTL1 0xCE Timer 3 Timer 3 channel 1 compare control
+T3CC1 0xCF Timer 3 Timer 3 channel 1 compare value
+T4CNT 0xEA Timer 4 Timer 4 counter
+T4CTL 0xEB Timer 4 Timer 4 control
+T4CCTL0 0xEC Timer 4 Timer 4 channel 0 compare control
+T4CC0 0xED Timer 4 Timer 4 channel 0 compare value
+T4CCTL1 0xEE Timer 4 Timer 4 channel 1 compare control
+T4CC1 0xEF Timer 4 Timer 4 channel 1 compare value
+TIMIF 0xD8 TMINT Timers 1/3/4 joint interrupt mask/flags
+U0CSR 0x86 USART 0 USART 0 control and status
+U0DBUF 0xC1 USART 0 USART 0 receive/transmit data buffer
+U0BAUD 0xC2 USART 0 USART 0 baud-rate control
+U0UCR 0xC4 USART 0 USART 0 UART control
+U0GCR 0xC5 USART 0 USART 0 generic control
+U1CSR 0xF8 USART 1 USART 1 control and status
+U1DBUF 0xF9 USART 1 USART 1 receive/transmit data buffer
+U1BAUD 0xFA USART 1 USART 1 baud-rate control
+U1UCR 0xFB USART 1 USART 1 UART control
+U1GCR 0xFC USART 1 USART 1 generic control
+WDCTL 0xC9 WDT Watchdog Timer contro

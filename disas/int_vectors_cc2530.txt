@@ -1,0 +1,18 @@
+0 RF core error situation RFERR 0x03 IEN0.RFERRIE TCON.RFERRIF(1)
+1 ADC end of conversion ADC 0x0B IEN0.ADCIE TCON.ADCIF(1)
+2 USART 0 RX complete URX0 0x13 IEN0.URX0IE TCON.URX0IF(1)
+3 USART 1 RX complete URX1 0x1B IEN0.URX1IE TCON.URX1IF(1)
+4 AES encryption/decryption complete ENC 0x23 IEN0.ENCIE S0CON.ENCIF
+5 Sleep Timer compare ST 0x2B IEN0.STIE IRCON.STIF
+6 Port-2 inputs/USB/I2C P2INT 0x33 IEN2.P2IE IRCON2.P2IF(2)
+7 USART 0 TX complete UTX0 0x3B IEN2.UTX0IE IRCON2.UTX0IF
+8 DMA transfer complete DMA 0x43 IEN1.DMAIE IRCON.DMAIF
+9 Timer 1 (16-bit) capture/compare/overflow T1 0x4B IEN1.T1IE IRCON.T1IF(1) (2)
+10 Timer 2 T2 0x53 IEN1.T2IE IRCON.T2IF(1) (2)
+11 Timer 3 (8-bit) capture/compare/overflow T3 0x5B IEN1.T3IE IRCON.T3IF(1) (2)
+12 Timer 4 (8-bit) capture/compare/overflow T4 0x63 IEN1.T4IE IRCON.T4IF(1) (2)
+13 Port 0 inputs P0INT 0x6B IEN1.P0IE IRCON.P0IF(2)
+14 USART 1 TX complete UTX1 0x73 IEN2.UTX1IE IRCON2.UTX1IF
+15 Port 1 inputs P1INT 0x7B IEN2.P1IE IRCON2.P1IF(2)
+16 RF general interrupts RF 0x83 IEN2.RFIE S1CON.RFIF(2)
+17 Watchdog overflow in timer mode WDT 0x8B IEN2.WDTIE IRCON2.WDTIF
