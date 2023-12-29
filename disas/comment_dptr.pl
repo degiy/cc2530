@@ -23,7 +23,7 @@ close f;
 
 for $a (keys %ht)
 {
-    print $a,"\n";
+    #print $a,"\n";
     $lab=$ht{$a};
     $st=~s/(?<=mov DPTR, #dptr_${a}) *$/  ; ${lab}/mg;
 }
