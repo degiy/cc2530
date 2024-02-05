@@ -8,6 +8,7 @@
 - instruction set : 
 	- https://www.win.tue.nl/~aeb/comp/8051/set8051.html
 	- https://ww1.microchip.com/downloads/en/DeviceDoc/doc4316.pdf
+	- https://developer.arm.com/documentation/101655/0961/8051-Instruction-Set-Manual/Instructions
 - architecture / design of the SOC :
 	- https://www.silabs.com/documents/public/presentations/8051_Instruction_Set.pdf
 	- https://www.brainkart.com/article/Basic-8051-Architecture_7908/ (for bit adressable SFR register, duality RAM/SFR,...)
@@ -32,5 +33,6 @@ You will certainly find older assemblers / simulator from the dos era who won't 
 
 # some code exemple
 - a C program to load your program using UART (written in C, and who compiles with SDCC) : https://github.com/ekawahyu/ccboot-CC2530 (great job, had to eat the doc too... i know the feeling). Maybe the best place to start in you plan to use C and a free toolchain on cc2530
-
+- an ASM program to bootload code into CC2531 trough USB DFU : https://github.com/rosvall/cc2531_bootloader.git
+- an ASM monitor for 8051 with plenty of usefull routines : https://www.pjrc.com/tech/8051/paulmon2.html
 
