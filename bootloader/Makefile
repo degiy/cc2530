@@ -22,7 +22,7 @@ LST_FILES    = $(SRCS:%.s=%.lst)
 GENERATED    =  $(HEX_FILE) $(IHX_FILE) $(BIN_FILE) $(MEM_FILE) $(REL_FILES) $(SYM_FILES) $(RST_FILES) $(LST_FILES) $(MAP_FILE)
 
 AS       = sdas8051
-ASFLAGS  = -gcpwb
+ASFLAGS  = -cpwb
 
 LD       = sdld
 LDFLAGS  = -numwx
