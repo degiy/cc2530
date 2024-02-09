@@ -18,8 +18,9 @@ REL_FILES    = $(SRCS:%.s=%.rel)
 SYM_FILES    = $(SRCS:%.s=%.sym)
 RST_FILES    = $(SRCS:%.s=%.rst)
 LST_FILES    = $(SRCS:%.s=%.lst)
+EXP_FILES	 = $(SRCS:%.s=%.exp)
 
-GENERATED    =  $(HEX_FILE) $(IHX_FILE) $(BIN_FILE) $(MEM_FILE) $(REL_FILES) $(SYM_FILES) $(RST_FILES) $(LST_FILES) $(MAP_FILE)
+GENERATED    =  $(HEX_FILE) $(IHX_FILE) $(BIN_FILE) $(MEM_FILE) $(REL_FILES) $(SYM_FILES) $(RST_FILES) $(LST_FILES) $(MAP_FILE) $(EXP_FILES)
 
 AS       = sdas8051
 ASFLAGS  = -cpwb
@@ -29,7 +30,7 @@ LDFLAGS  = -numwx
 
 .PHONY: all clean
 
-all: $(BIN_FILE) $(HEX_FILE)
+all: $(BIN_FILE) $(HEX_FILE) $(EXP_FILES)
 
 %.bin: %.ihx
 	objcopy --input-target=ihex --output-target=binary $< $@
@@ -50,6 +51,9 @@ $(IHX_FILE) $(RST_FILES) $(MEM_FILE): $(REL_FILES) $(LST_FILES) $(SYM_FILES)
 	$(AS) $(ASFLAGS) -s $@ $<
 
 main.rel: $(wildcard *.inc)
+
+%.exp: %.sym
+	grep 'GR$$' $< | sort -k4,4 | awk '{print $$2,"=0x"$$3}' > $@
 
 clean:
 	rm -f $(GENERATED)
