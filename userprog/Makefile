@@ -27,9 +27,9 @@ ASFLAGS  = -cpwb
 LD       = sdld
 LDFLAGS  = -numwx
 
-.PHONY: all clean
+.PHONY: all clean upload
 
-all: $(BIN_FILE) $(HEX_FILE)
+all: $(BIN_FILE) $(HEX_FILE) upload
 
 %.bin: %.ihx
 	objcopy --input-target=ihex --output-target=binary $< $@
@@ -49,11 +49,12 @@ $(IHX_FILE) $(RST_FILES) $(MEM_FILE): $(REL_FILES) $(LST_FILES) $(SYM_FILES)
 %.sym: %.s
 	$(AS) $(ASFLAGS) -s $@ $<
 
-main.rel: $(wildcard *.inc)
+user.rel: $(wildcard ../bootloader/*.inc) ../bootloader/main.exp
 
 clean:
 	rm -f $(GENERATED)
 
-
+upload: $(BIN_FILE)
+	../bootloader/./upload_bin.pl $(BIN_FILE) /dev/ttyUSB0
 
 # end

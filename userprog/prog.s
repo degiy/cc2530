@@ -46,8 +46,8 @@ _main:
     mov     dptr, #_txt_user_start
     lcall   _print
 
-iloop:
-    sjmp    iloop
+l_iloop:
+    sjmp    l_iloop
 
 _txt_user_start:
     .ascii  "start of user prog #1"
