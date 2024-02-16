@@ -269,7 +269,7 @@ l_urx0_exit2:
     setb    IEN0_EA                       
     reti                                  
 
-_print:
+_print::
     push    acc                           
 l_print_1:
     clr     a                             
